@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+header a {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+header a.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}

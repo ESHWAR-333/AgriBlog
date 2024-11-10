@@ -1,0 +1,46 @@
+div.post {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  div.post {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
+div.post div.content-text-container h2 {
+  margin: 0;
+}
+div.post div.content-text-container a {
+  text-decoration: none;
+  color: inherit;
+}
+div.post {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+p.info a.author {
+  text-decoration: none;
+  color: #333;
+}
+p.info {
+  margin: 0;
+  color: #888;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+p.summary {
+  margin: 10px 0;
+  height: 1.5rem;
+}
+img {
+  max-width: 100%;
+}

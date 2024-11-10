@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #222;
+
+  font-family: "Roboto-Medium";
+}
+img {
+  max-width: 100%;
+}
+main {
+  padding: 10px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+form.login,
+form.register {
+  max-width: 400px;
+  margin: 0 auto;
+}
+input {
+  display: block;
+  margin-bottom: 6px;
+  width: 100%;
+  padding: 5px 10px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+button {
+  width: 100%;
+  display: block;
+  background-color: #555;
+  border: 0px;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+form.h1 {
+  text-align: center;
+}
