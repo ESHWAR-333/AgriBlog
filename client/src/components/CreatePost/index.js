@@ -22,14 +22,11 @@ function CreatePost() {
       alert("Select the Image");
     } else {
       data.set("file", files[0]);
-      const response = await fetch(
-        "https://agriblog-backend.onrender.com/post",
-        {
-          method: "POST",
-          body: data,
-          credentials: "include",
-        }
-      );
+      const response = await fetch("http://localhost:4000/post", {
+        method: "POST",
+        body: data,
+        credentials: "include",
+      });
       if (response.ok) {
         setDirect(true);
       }

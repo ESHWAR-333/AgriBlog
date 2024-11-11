@@ -8,7 +8,7 @@ function Blog({ _id, title, summary, content, cover, createdAt, author }) {
     <div className="post">
       <div className="image-container">
         <Link to={`/post/${_id}`}>
-          <img src={`https://agriblog-backend.onrender.com/${cover}`} alt="" />
+          <img src={`http://localhost:4000/${cover}`} alt="" />
         </Link>
       </div>
 
