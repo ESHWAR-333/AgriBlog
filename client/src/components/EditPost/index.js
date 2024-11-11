@@ -12,14 +12,16 @@ function EditPost() {
   const [redirect, setDirect] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:4000/post/" + id).then((response) => {
-      response.json().then((postInfo) => {
-        console.log(postInfo);
-        setTitle(postInfo.title);
-        setContent(postInfo.content);
-        setSummary(postInfo.summary);
-      });
-    });
+    fetch("https://agriblog-backend.onrender.com/post/" + id).then(
+      (response) => {
+        response.json().then((postInfo) => {
+          console.log(postInfo);
+          setTitle(postInfo.title);
+          setContent(postInfo.content);
+          setSummary(postInfo.summary);
+        });
+      }
+    );
   }, []);
 
   const updatePost = async (e) => {
@@ -32,7 +34,7 @@ function EditPost() {
     if (files?.[0]) {
       data.set("file", files?.[0]);
     }
-    const response = await fetch("http://localhost:4000/post", {
+    const response = await fetch("https://agriblog-backend.onrender.com/post", {
       method: "PUT",
       body: data,
       credentials: "include",
