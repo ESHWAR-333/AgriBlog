@@ -10,7 +10,7 @@ function Post() {
   const { id } = useParams();
   const { userInfo } = useContext(UserContext);
   useEffect(() => {
-    fetch(`http://localhost:4000/post/${id}`).then((res) => {
+    fetch(`https://agriblog-backend.onrender.com/post/${id}`).then((res) => {
       res.json().then((postInfo) => {
         setPostInfo(postInfo);
       });
@@ -45,7 +45,10 @@ function Post() {
         </div>
       )}
       <div className="image">
-        <img src={`http://localhost:4000/${postInfo.cover}`} alt="" />
+        <img
+          src={`https://agriblog-backend.onrender.com/${postInfo.cover}`}
+          alt=""
+        />
       </div>
 
       <div

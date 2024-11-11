@@ -7,17 +7,17 @@ export default function NavBar() {
   const { setUserInfo, userInfo } = useContext(UserContext);
 
   useEffect(() => {
-    fetch("http://localhost:4000/profile", { credentials: "include" }).then(
-      (res) => {
-        res.json().then((info) => {
-          setUserInfo(info);
-        });
-      }
-    );
+    fetch("https://agriblog-backend.onrender.com/profile", {
+      credentials: "include",
+    }).then((res) => {
+      res.json().then((info) => {
+        setUserInfo(info);
+      });
+    });
   }, []);
 
   function logout() {
-    fetch("http://localhost:4000/logout", {
+    fetch("https://agriblog-backend.onrender.com/logout", {
       credentials: "include",
       method: "POST",
     });
